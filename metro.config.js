@@ -2,15 +2,25 @@ const path = require('path');
 
 const metroResolve = require('metro-resolver/src/resolve');
 
+const domModuleMap = {
+  './effects/BlurView': path.resolve(__dirname, './src/BlurView.dom.js'),
+  './NativeLinearGradient': path.resolve(__dirname, './src/NativeLinearGradient.dom.js'),
+  './ExponentNotifications': path.resolve(__dirname, './src/ExponentNotifications.dom.js'),
+  './ExponentSecureStore': path.resolve(__dirname, './src/ExponentSecureStore.dom.js'),
+  './ExponentSpeech': path.resolve(__dirname, './src/ExponentSpeech.dom.js'),
+  'expo-constants': path.resolve(__dirname, './src/ExponentConstants.dom.js'),
+  'expo-file-system': path.resolve(__dirname, './src/ExponentFileSystem.dom.js'),
+  './facebook-ads': path.resolve(__dirname, './src/facebook-ads.dom.js'),
+
+  'react-native-gesture-handler': path.resolve(__dirname, './src/GestureHandler.dom.js'),
+};
+
 module.exports = {
   projectRoot: path.resolve(__dirname, '../..'),
   resolver: {
     resolveRequest: (context, realModuleName, platform) => {
-      if (platform === 'dom' && realModuleName === 'expo') {
-        realModuleName = path.resolve(__dirname, './src/Expo.dom.js');
-      }
-      if (platform === 'dom' && realModuleName === 'react-native-gesture-handler') {
-        realModuleName = path.resolve(__dirname, './src/GestureHandler.dom.js');
+      if (platform === 'dom' && domModuleMap[realModuleName]) {
+        realModuleName = domModuleMap[realModuleName];
       }
       const { resolveRequest, ...restContext } = context;
       return metroResolve(restContext, realModuleName, platform);
