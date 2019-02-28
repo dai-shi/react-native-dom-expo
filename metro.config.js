@@ -8,8 +8,11 @@ const domModuleMap = {
   './ExponentNotifications': path.resolve(__dirname, './src/ExponentNotifications.dom.js'),
   './ExponentSecureStore': path.resolve(__dirname, './src/ExponentSecureStore.dom.js'),
   './ExponentSpeech': path.resolve(__dirname, './src/ExponentSpeech.dom.js'),
+  './ExpoFontLoader': path.resolve(__dirname, './src/ExpoFontLoader.dom.js'),
   'expo-constants': path.resolve(__dirname, './src/ExponentConstants.dom.js'),
   'expo-file-system': path.resolve(__dirname, './src/ExponentFileSystem.dom.js'),
+  'expo-asset/src/Asset': path.resolve(__dirname, './src/ExpoAsset.dom.js'),
+  'expo-asset': path.resolve(__dirname, './src/ExpoAssetIndex.dom.js'),
   './facebook-ads': path.resolve(__dirname, './src/facebook-ads.dom.js'),
 
   'react-native-gesture-handler': path.resolve(__dirname, './src/GestureHandler.dom.js'),
@@ -22,6 +25,7 @@ module.exports = {
       if (platform === 'dom' && domModuleMap[realModuleName]) {
         realModuleName = domModuleMap[realModuleName];
       }
+      // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`); // eslint-disable-line
       const { resolveRequest, ...restContext } = context;
       return metroResolve(restContext, realModuleName, platform);
     },
