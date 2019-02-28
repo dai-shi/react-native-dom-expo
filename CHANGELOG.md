@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.3] - 2019-02-28
 ### Added
 - Minimal Expo patch
 
