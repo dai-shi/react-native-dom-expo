@@ -1,11 +1,14 @@
 {
   "name": "react-native-dom-expo",
   "description": "A patch library to make Expo work with react-native-dom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
     "url": "https://github.com/dai-shi/react-native-dom-expo.git"
+  },
+  "bin": {
+    "init-rndom-expo": "init-rndom-expo.js"
   },
   "scripts": {
     "test": "eslint ."
@@ -17,7 +20,9 @@
     "expo"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "edit-json-file": "^1.2.1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.3.0",
