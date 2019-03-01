@@ -1,7 +1,7 @@
 {
   "name": "react-native-dom-expo",
   "description": "A patch library to make Expo work with react-native-dom",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",

@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.5] - 2019-03-02
 ### Added
 - Implement FontLoader
 
