@@ -3,7 +3,7 @@
 
 // ref: https://gist.github.com/vincentriemer/b8e5e97a92a44638a118016801d378cd
 
-import RCTModule from 'react-native-dom/lib/bridge/RCTModule';
+import { RCTModule } from 'react-native-dom';
 import FontFaceObserver from 'fontfaceobserver';
 
 export default class FontLoader extends RCTModule {
