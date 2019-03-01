@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.4] - 2019-03-01
 ### Changed
 - Fix image not loaded (DEV only)
 
