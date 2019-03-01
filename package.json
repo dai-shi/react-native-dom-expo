@@ -41,6 +41,9 @@
     "extends": [
       "airbnb"
     ],
+    "globals": {
+      "__DEV__": "readonly"
+    },
     "rules": {
       "import/no-unresolved": 0,
       "react/destructuring-assignment": 0,

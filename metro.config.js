@@ -25,7 +25,7 @@ module.exports = {
       if (platform === 'dom' && domModuleMap[realModuleName]) {
         realModuleName = domModuleMap[realModuleName];
       }
-      // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`); // eslint-disable-line
+      // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`);
       const { resolveRequest, ...restContext } = context;
       return metroResolve(restContext, realModuleName, platform);
     },

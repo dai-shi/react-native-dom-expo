@@ -1,4 +1,3 @@
-/* global __DEV__ */
 /* eslint-disable global-require, prefer-template, prefer-destructuring, prefer-const */
 
 import { Image, PixelRatio, Platform } from 'react-native';

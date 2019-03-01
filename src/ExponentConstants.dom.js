@@ -5,4 +5,10 @@ export default {
   platform: {
     dom: ExponentConstants.platform.web,
   },
+  manifest: {
+    ...(__DEV__ && {
+      developer: {},
+      bundleUrl: 'http://localhost:8081/dom/',
+    }),
+  },
 };
