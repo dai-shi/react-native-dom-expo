@@ -13,7 +13,7 @@ export default class FontLoader extends RCTModule {
     const resolve = this.bridge.callbackFromId(resolveId);
     const reject = this.bridge.callbackFromId(rejectId);
     if (!document.head) {
-      reject(new Error('no document head'));
+      reject('No document head');
       return;
     }
 
@@ -32,6 +32,8 @@ export default class FontLoader extends RCTModule {
     document.head.appendChild(style);
 
     const font = new FontFaceObserver(name);
-    font.load().then(resolve).catch(reject);
+    font.load().then(resolve).catch((e) => {
+      reject(`Failed to load font "${name}": ${e}`);
+    });
   }
 }

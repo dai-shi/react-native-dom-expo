@@ -128,7 +128,7 @@ const pickScale = (originalMeta) => {
   };
 };
 
-const getImageInfoAsync = src => Promise((resolve, reject) => {
+const getImageInfoAsync = src => new Promise((resolve, reject) => {
   Image.getSize(src, (width, height) => {
     resolve({ width, height });
   }, reject);
