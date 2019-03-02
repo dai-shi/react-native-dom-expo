@@ -8,9 +8,11 @@ export default {
   get name() {
     return 'ExpoFontLoader';
   },
-  async loadAsync(nativeFontName, resource) {
+  loadAsync(nativeFontName, resource) {
     // To revert `${Constants.sessionId}-${name}`
     const fontName = nativeFontName.slice(Constants.sessionId.length + 1);
-    return FontLoader.loadFont(fontName, resource);
+    return new Promise((resolve, reject) => {
+      FontLoader.loadFont(fontName, resource, resolve, reject);
+    });
   },
 };

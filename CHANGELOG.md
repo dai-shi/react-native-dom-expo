@@ -1,6 +1,9 @@
 # Change Log
 
 ## [Unreleased]
+### Changed
+- Fix FontLoader
+- Fix Asset
 
 ## [0.0.5] - 2019-03-02
 ### Added

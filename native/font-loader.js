@@ -9,8 +9,13 @@ import FontFaceObserver from 'fontfaceobserver';
 export default class FontLoader extends RCTModule {
   static moduleName = 'FontLoader';
 
-  async $$loadFont(name, url) {
-    if (!document.head) return Promise.reject();
+  $loadFont(name, url, resolveId, rejectId) {
+    const resolve = this.bridge.callbackFromId(resolveId);
+    const reject = this.bridge.callbackFromId(rejectId);
+    if (!document.head) {
+      reject(new Error('no document head'));
+      return;
+    }
 
     const fontStyles = `@font-face {
       font-family: "${name}";
@@ -27,6 +32,6 @@ export default class FontLoader extends RCTModule {
     document.head.appendChild(style);
 
     const font = new FontFaceObserver(name);
-    return font.load();
+    font.load().then(resolve).catch(reject);
   }
 }

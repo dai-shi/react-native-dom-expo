@@ -9,6 +9,7 @@ const domModuleMap = {
   './ExponentSecureStore': path.resolve(__dirname, './src/ExponentSecureStore.dom.js'),
   './ExponentSpeech': path.resolve(__dirname, './src/ExponentSpeech.dom.js'),
   './ExpoFontLoader': path.resolve(__dirname, './src/ExpoFontLoader.dom.js'),
+  './ExponentWebBrowser': path.resolve(__dirname, './src/ExponentWebBrowser.dom.js'),
   'expo-constants': path.resolve(__dirname, './src/ExponentConstants.dom.js'),
   'expo-file-system': path.resolve(__dirname, './src/ExponentFileSystem.dom.js'),
   'expo-asset/src/Asset': path.resolve(__dirname, './src/ExpoAsset.dom.js'),
