@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.7] - 2019-03-03
 ### Added
 - WebBrowser support (not for auth)
 
