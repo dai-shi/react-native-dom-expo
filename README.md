@@ -19,3 +19,89 @@ npm run rndom
 ```
 
 Then, open <http://localhost:8081/dom/> in your browser.
+
+## Status
+
+- Mostly working :point_right: :white_check_mark:
+- Partially working :point_right: :ballot_box_with_check:
+- Some implemented :point_right: :heavy_check_mark:
+- Hacked :point_right: :radio_button:
+- Not applicable :point_right: :black_medium_square:
+
+### Runtime
+- :white_check_mark: Dev
+- :white_medium_square: Build
+
+### Expo API
+- :white_medium_square: AR
+- :white_medium_square: Accelerometer
+- :white_medium_square: Admob
+- :white_medium_square: Amplitude
+- :white_medium_square: AppAuth
+- :white_medium_square: AppLoading
+- :white_medium_square: ART
+- :ballot_box_with_check: Asset
+- :white_medium_square: Audio
+- :white_medium_square: AuthSession
+- :white_medium_square: AV
+- :white_medium_square: BackgroundFetch
+- :white_medium_square: BarCodeScanner
+- :white_medium_square: Barometer
+- :radio_button: BlurView
+- :white_medium_square: Branch
+- :white_medium_square: Brightness
+- :white_medium_square: Calendar
+- :white_medium_square: Camera
+- :heavy_check_mark: Constants
+- :white_medium_square: Contacts
+- :white_medium_square: DeviceMotion
+- :white_medium_square: DocumentPicker
+- :white_medium_square: ErrorRecovery
+- :radio_button: FacebookAds
+- :white_medium_square: Facebook
+- :white_medium_square: FaceDetector
+- :radio_button: FileSystem
+- :white_check_mark: Font
+- :radio_button: GestureHandler
+- :white_medium_square: GLView
+- :white_medium_square: GoogleSignIn
+- :white_medium_square: Google
+- :white_medium_square: Gyroscope
+- :white_medium_square: Haptic
+- :white_medium_square: Haptics
+- :white_medium_square: ImageManipulator
+- :white_medium_square: ImagePicker
+- :white_medium_square: IntentLauncherAndroid
+- :white_medium_square: Overview
+- :white_medium_square: KeepAwake
+- :radio_button: LinearGradient
+- :white_medium_square: Linking
+- :white_medium_square: LocalAuthentication
+- :white_medium_square: Localization
+- :white_medium_square: Location
+- :white_medium_square: Lottie
+- :white_medium_square: Magnetometer
+- :white_medium_square: MailComposer
+- :white_medium_square: MapView
+- :white_medium_square: MediaLibrary
+- :radio_button: Notifications
+- :white_medium_square: Payments
+- :white_medium_square: Pedometer
+- :white_medium_square: Permissions
+- :white_medium_square: Print
+- :white_medium_square: registerRootComponent
+- :white_medium_square: ScreenOrientation
+- :radio_button: SecureStore
+- :white_medium_square: Segment
+- :white_medium_square: Sensors
+- :white_medium_square: SMS
+- :radio_button: Speech
+- :white_medium_square: SplashScreen
+- :white_medium_square: SQLite
+- :white_medium_square: StoreReview
+- :white_medium_square: Svg
+- :white_medium_square: takeSnapshotAsync
+- :white_medium_square: TaskManager
+- :white_medium_square: Updates
+- :white_medium_square: Video
+- :heavy_check_mark: WebBrowser
