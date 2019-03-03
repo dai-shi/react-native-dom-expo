@@ -28,12 +28,12 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - Hacked :point_right: :radio_button:
 - Not applicable :point_right: :black_medium_square:
 
-### Runtime
+### Environment
 - :white_check_mark: Dev
 - :white_medium_square: Build
 
 ### Expo API
-- :white_medium_square: AR
+- :black_medium_square: AR
 - :white_medium_square: Accelerometer
 - :white_medium_square: Admob
 - :white_medium_square: Amplitude
