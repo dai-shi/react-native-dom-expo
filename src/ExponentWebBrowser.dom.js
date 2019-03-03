@@ -1,3 +1,19 @@
-import ExponentWebBrowser from '../../expo/build/WebBrowser/ExponentWebBrowser.web';
+import { NativeModules } from 'react-native';
 
-export default ExponentWebBrowser;
+const { WebBrowser } = NativeModules;
+
+export default {
+  get name() {
+    return 'ExponentWebBrowser';
+  },
+  openBrowserAsync(url) {
+    return new Promise((resolve, reject) => {
+      WebBrowser.openBrowserAsync(url, resolve, reject);
+    });
+  },
+  dismissBrowser() {
+    return new Promise((resolve, reject) => {
+      WebBrowser.dismissBrowser(resolve, reject);
+    });
+  },
+};
