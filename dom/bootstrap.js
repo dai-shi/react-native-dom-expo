@@ -12,7 +12,10 @@ const rnBundlePath = './entry.bundle?platform=dom&dev=true';
 // React Native DOM Runtime Options ===========================
 const ReactNativeDomOptions = {
   enableHotReload: false,
-  nativeModules: [FontLoader, WebBrowser],
+  nativeModules: [
+    FontLoader,
+    WebBrowser,
+  ],
 };
 
 // App Initialization =========================================

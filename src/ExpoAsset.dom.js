@@ -1,3 +1,5 @@
+// TODO this may include unnecessary code
+
 /* eslint-disable global-require, prefer-template, prefer-destructuring, prefer-const */
 
 import { Image, PixelRatio, Platform } from 'react-native';

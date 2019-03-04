@@ -47,7 +47,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: BackgroundFetch
 - :white_medium_square: BarCodeScanner
 - :white_medium_square: Barometer
-- :radio_button: BlurView
+- :white_check_mark: BlurView
 - :white_medium_square: Branch
 - :white_medium_square: Brightness
 - :white_medium_square: Calendar
@@ -74,7 +74,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: IntentLauncherAndroid
 - :white_medium_square: Overview
 - :white_medium_square: KeepAwake
-- :radio_button: LinearGradient
+- :white_check_mark: LinearGradient
 - :white_medium_square: Linking
 - :white_medium_square: LocalAuthentication
 - :white_medium_square: Localization

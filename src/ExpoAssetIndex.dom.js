@@ -1,7 +1,5 @@
-/* eslint-disable global-require */
+/* eslint-disable import/prefer-default-export */
 
-module.exports = {
-  get Asset() {
-    return require('./ExpoAsset.dom').default;
-  },
-};
+import ExpoAsset from './ExpoAsset.dom';
+
+export const Asset = ExpoAsset;

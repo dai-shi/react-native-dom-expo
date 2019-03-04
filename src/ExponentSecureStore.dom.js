@@ -1,3 +1,8 @@
-import ExponentSecureStore from '../../expo/build/SecureStore/ExponentSecureStore.web';
-
-export default ExponentSecureStore;
+export default {
+  get name() {
+    return 'ExponentSecureStore';
+  },
+  async getValueWithKeyAsync() {
+    return null;
+  },
+};

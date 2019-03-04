@@ -1,6 +1,10 @@
 # Change Log
 
 ## [Unreleased]
+### Added
+- Empty NativeModulesProxy
+### Changed
+- Various small fixes
 
 ## [0.0.7] - 2019-03-03
 ### Added
