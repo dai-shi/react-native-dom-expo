@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - Empty NativeModulesProxy
+- Splash screen support
 ### Changed
 - Various small fixes
 
