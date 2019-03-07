@@ -1,6 +1,6 @@
 // TODO this may include unnecessary code
 
-/* eslint-disable global-require, prefer-template, prefer-destructuring, prefer-const */
+/* eslint-disable global-require, prefer-destructuring, prefer-const */
 
 import { Image, PixelRatio, Platform } from 'react-native';
 import AssetRegistry from 'react-native/Libraries/Image/AssetRegistry';

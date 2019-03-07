@@ -15,10 +15,24 @@
     width: 100%;
     height: 100%;
   }
+  #rndom-expo-splash-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background-image: url(../assets/images/splash.png);
+    background-size: contain;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 </style>
 </head>
 
 <body>
+  <div id="rndom-expo-splash-screen"></div>
   <script src="./bootstrap.bundle?platform=dom&dev=true"></script>
 </body>
 
