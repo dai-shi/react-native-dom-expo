@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.8] - 2019-03-07
 ### Added
 - Empty NativeModulesProxy
 - Splash screen support
