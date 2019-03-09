@@ -4,6 +4,7 @@
 ### Changed
 - Workaround for path mapping (#8)
 - Improve web-browser native module
+- Improve font-loader native module
 
 ## [0.0.8] - 2019-03-07
 ### Added
