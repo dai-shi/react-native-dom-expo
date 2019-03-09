@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.9] - 2019-03-09
 ### Changed
 - Workaround for path mapping (#8)
 - Improve web-browser native module
