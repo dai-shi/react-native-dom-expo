@@ -5,6 +5,7 @@
 - Use react-native-gesture-handler for web platform
 ### Changed
 - Move various patches to empty native modules
+- Move constants to native module
 
 ## [0.0.9] - 2019-03-09
 ### Changed
