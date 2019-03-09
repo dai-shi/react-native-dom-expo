@@ -19,7 +19,7 @@ export default class WebBrowser extends RCTModule {
           }
         };
       } catch (e) {
-        reject(`Failed to open browser: ${e}`);
+        reject(e);
       }
     });
   }
@@ -36,7 +36,7 @@ export default class WebBrowser extends RCTModule {
           throw new Error('already dismissed');
         }
       } catch (e) {
-        reject(`Failed to dismiss browser: ${e}`);
+        reject(e);
       }
     });
   }
