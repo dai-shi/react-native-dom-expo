@@ -1,6 +1,3 @@
-/* eslint-env browser */
-/* eslint-disable prefer-promise-reject-errors */
-
 import { RCTModule } from 'react-native-dom';
 
 export default class WebBrowser extends RCTModule {

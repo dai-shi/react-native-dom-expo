@@ -1,6 +1,3 @@
-/* eslint-env browser */
-/* eslint-disable class-methods-use-this, prefer-promise-reject-errors */
-
 // ref: https://gist.github.com/vincentriemer/b8e5e97a92a44638a118016801d378cd
 
 import { RCTModule } from 'react-native-dom';

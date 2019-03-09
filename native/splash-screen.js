@@ -1,6 +1,3 @@
-/* eslint-env browser */
-/* eslint-disable class-methods-use-this */
-
 import { RCTModule } from 'react-native-dom';
 
 export default class SplashScreen extends RCTModule {

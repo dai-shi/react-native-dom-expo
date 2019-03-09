@@ -7,7 +7,6 @@ const domModuleMap = {
   './effects/BlurView': path.resolve(__dirname, './src/BlurView.dom.js'),
   './NativeLinearGradient': path.resolve(__dirname, './src/NativeLinearGradient.dom.js'),
   './NativeModulesProxy': path.resolve(__dirname, './src/NativeModulesProxy.dom.js'),
-  './ExponentNotifications': path.resolve(__dirname, './src/ExponentNotifications.dom.js'),
   './ExponentSecureStore': path.resolve(__dirname, './src/ExponentSecureStore.dom.js'),
   './ExponentSpeech': path.resolve(__dirname, './src/ExponentSpeech.dom.js'),
   'expo-constants': path.resolve(__dirname, './src/ExponentConstants.dom.js'),

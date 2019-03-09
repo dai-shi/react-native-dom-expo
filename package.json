@@ -55,6 +55,16 @@
       "react/prefer-stateless-function": 0,
       "no-param-reassign": 0,
       "prefer-template": 0
-    }
-  }
+    },
+    "overrides": [{
+      "files": ["native/*.js"],
+      "env": { "browser": true },
+      "rules": {
+        "class-methods-use-this": 0
+      }
+    }]
+  },
+  "eslintIgnore": [
+    "vendor"
+  ]
 }

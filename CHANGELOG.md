@@ -3,6 +3,8 @@
 ## [Unreleased]
 ### Added
 - Use react-native-gesture-handler for web platform
+### Changed
+- Move various patches to empty native modules
 
 ## [0.0.9] - 2019-03-09
 ### Changed
