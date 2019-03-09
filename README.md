@@ -61,7 +61,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: FaceDetector
 - :radio_button: FileSystem
 - :white_check_mark: Font
-- :radio_button: GestureHandler
+- :ballot_box_with_check: GestureHandler
 - :white_medium_square: GLView
 - :white_medium_square: GoogleSignIn
 - :white_medium_square: Google
