@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Added
+- Permissions module
 
 ## [0.0.10] - 2019-03-09
 ### Added

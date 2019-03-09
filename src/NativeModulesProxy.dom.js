@@ -2,12 +2,14 @@ import { NativeModules } from 'react-native';
 
 const {
   ExponentConstants,
-  ExponentFontLoader,
   ExponentFileSystem,
+  ExponentFontLoader,
+  ExponentPermissions,
 } = NativeModules;
 
 export default {
   ExponentConstants,
-  ExpoFontLoader: ExponentFontLoader,
   ExponentFileSystem,
+  ExpoFontLoader: ExponentFontLoader,
+  ExpoPermissions: ExponentPermissions,
 };

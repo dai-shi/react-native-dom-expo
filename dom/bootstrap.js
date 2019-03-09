@@ -10,6 +10,7 @@ import FileSystem from 'react-native-dom-expo/native/file-system';
 import Notifications from 'react-native-dom-expo/native/notifications';
 import SecureStore from 'react-native-dom-expo/native/secure-store';
 import Speech from 'react-native-dom-expo/native/speech';
+import Permissions from 'react-native-dom-expo/native/permissions';
 
 import appJson from '../app.json';
 
@@ -47,6 +48,7 @@ const ReactNativeDomOptions = {
     Notifications,
     SecureStore,
     Speech,
+    Permissions,
   ],
 };
 
