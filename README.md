@@ -38,7 +38,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: Admob
 - :white_medium_square: Amplitude
 - :white_medium_square: AppAuth
-- :white_medium_square: AppLoading
+- :white_check_mark: AppLoading
 - :white_medium_square: ART
 - :ballot_box_with_check: Asset
 - :white_medium_square: Audio
@@ -96,7 +96,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: Sensors
 - :white_medium_square: SMS
 - :radio_button: Speech
-- :white_medium_square: SplashScreen
+- :white_check_mark: SplashScreen
 - :white_medium_square: SQLite
 - :white_medium_square: StoreReview
 - :white_medium_square: Svg
