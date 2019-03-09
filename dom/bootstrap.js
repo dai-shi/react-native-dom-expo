@@ -1,6 +1,8 @@
 /* eslint-env browser */
 
 import { RNDomInstance } from 'react-native-dom';
+
+import Constants from 'react-native-dom-expo/native/constants';
 import FontLoader from 'react-native-dom-expo/native/font-loader';
 import WebBrowser from 'react-native-dom-expo/native/web-browser';
 import SplashScreen from 'react-native-dom-expo/native/splash-screen';
@@ -37,6 +39,7 @@ const rnBundlePath = './entry.bundle?platform=dom&dev=true';
 const ReactNativeDomOptions = {
   enableHotReload: false,
   nativeModules: [
+    Constants,
     FontLoader,
     WebBrowser,
     SplashScreen,
