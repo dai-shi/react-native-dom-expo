@@ -16,7 +16,7 @@ const domModuleMap = {
   'expo-asset': path.resolve(__dirname, './src/ExpoAssetIndex.dom.js'),
   './facebook-ads': path.resolve(__dirname, './src/facebook-ads.dom.js'),
 
-  'react-native-gesture-handler': path.resolve(__dirname, './src/GestureHandler.dom.js'),
+  'react-native-gesture-handler': path.resolve(__dirname, './vendor/react-native-gesture-handler/index.js'),
 };
 
 // pass mapping workaround for Expo SDK

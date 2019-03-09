@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Added
+- Use react-native-gesture-handler for web platform
 
 ## [0.0.9] - 2019-03-09
 ### Changed
