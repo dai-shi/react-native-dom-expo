@@ -6,6 +6,7 @@ import WebBrowser from 'react-native-dom-expo/native/web-browser';
 import SplashScreen from 'react-native-dom-expo/native/splash-screen';
 import FileSystem from 'react-native-dom-expo/native/file-system';
 import Notifications from 'react-native-dom-expo/native/notifications';
+import SecureStore from 'react-native-dom-expo/native/secure-store';
 
 import appJson from '../app.json';
 
@@ -40,6 +41,7 @@ const ReactNativeDomOptions = {
     SplashScreen,
     FileSystem,
     Notifications,
+    SecureStore,
   ],
 };
 
