@@ -12,7 +12,6 @@ If you are interested in contributing, please jump in.
 ```bash
 npx expo-cli init -t tabs --name expo-rndom --non-interactive expo-rndom
 cd expo-rndom
-npm install react@16.6.3 react-native@0.57.8
 npm install react-native-dom react-native-dom-expo
 npx init-rndom-expo
 npm run rndom
