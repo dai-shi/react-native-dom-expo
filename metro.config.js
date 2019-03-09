@@ -1,4 +1,5 @@
 const path = require('path');
+const glob = require('glob');
 
 const metroResolve = require('metro-resolver/src/resolve');
 
@@ -19,6 +20,20 @@ const domModuleMap = {
 
   'react-native-gesture-handler': path.resolve(__dirname, './src/GestureHandler.dom.js'),
 };
+
+// pass mapping workaround for Expo SDK
+const baseDir = path.resolve(__dirname, '../react-native-dom/Libraries');
+glob.sync(baseDir + '/**/*.dom.js').forEach((fullPath) => {
+  const relPath = fullPath.slice(baseDir.length, -'.dom.js'.length);
+  const pathList = relPath.split('/');
+  const name = pathList.pop();
+  const dir = pathList.pop();
+  domModuleMap['./..' + relPath] = fullPath;
+  domModuleMap['./../..' + relPath] = fullPath;
+  domModuleMap['./' + name] = fullPath;
+  domModuleMap['./../../' + dir + '/' + name] = fullPath;
+});
+require('fs').appendFileSync('/tmp/metro-resolve.log', `${JSON.stringify(domModuleMap, null, 2)}\n`);
 
 module.exports = {
   projectRoot: path.resolve(__dirname, '../..'),
