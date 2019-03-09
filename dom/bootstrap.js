@@ -4,6 +4,7 @@ import { RNDomInstance } from 'react-native-dom';
 import FontLoader from 'react-native-dom-expo/native/font-loader';
 import WebBrowser from 'react-native-dom-expo/native/web-browser';
 import SplashScreen from 'react-native-dom-expo/native/splash-screen';
+import FileSystem from 'react-native-dom-expo/native/file-system';
 
 import appJson from '../app.json';
 
@@ -36,6 +37,7 @@ const ReactNativeDomOptions = {
     FontLoader,
     WebBrowser,
     SplashScreen,
+    FileSystem,
   ],
 };
 
