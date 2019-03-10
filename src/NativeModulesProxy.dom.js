@@ -3,6 +3,7 @@ import { NativeModules } from 'react-native';
 const {
   ExponentConstants,
   ExponentFileSystem,
+  ExponentCameraManager,
   ExponentFontLoader,
   ExponentPermissions,
 } = NativeModules;
@@ -10,6 +11,7 @@ const {
 export default {
   ExponentConstants,
   ExponentFileSystem,
+  ExponentCameraManager,
   ExpoFontLoader: ExponentFontLoader,
   ExpoPermissions: ExponentPermissions,
 };

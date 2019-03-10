@@ -11,6 +11,7 @@ import Notifications from 'react-native-dom-expo/native/notifications';
 import SecureStore from 'react-native-dom-expo/native/secure-store';
 import Speech from 'react-native-dom-expo/native/speech';
 import Permissions from 'react-native-dom-expo/native/permissions';
+import CameraManager from 'react-native-dom-expo/native/camera-manager';
 
 import appJson from '../app.json';
 
@@ -49,6 +50,7 @@ const ReactNativeDomOptions = {
     SecureStore,
     Speech,
     Permissions,
+    CameraManager,
   ],
 };
 

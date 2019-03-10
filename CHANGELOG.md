@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - Permissions module
+- Camera module
 
 ## [0.0.10] - 2019-03-09
 ### Added
