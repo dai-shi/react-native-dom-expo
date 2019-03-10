@@ -3,7 +3,7 @@ import { RCTModule } from 'react-native-dom';
 import ExpoPermissions from '../../expo-permissions/src/ExpoPermissions.web';
 
 export default class Permissions extends RCTModule {
-  static moduleName = 'ExponentPermissions';
+  static moduleName = 'ExpoPermissions';
 
   $$getAsync(...types) {
     return ExpoPermissions.getAsync(...types);

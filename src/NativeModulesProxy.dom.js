@@ -1,17 +1,10 @@
 import { NativeModules } from 'react-native';
 
-const {
-  ExponentConstants,
-  ExponentFileSystem,
-  ExponentCameraManager,
-  ExponentFontLoader,
-  ExponentPermissions,
-} = NativeModules;
+const nativeModulesProxy = {};
+Object.keys(NativeModules).forEach((moduleName) => {
+  if (moduleName.startsWith('Expo')) {
+    nativeModulesProxy[moduleName] = NativeModules[moduleName];
+  }
+});
 
-export default {
-  ExponentConstants,
-  ExponentFileSystem,
-  ExponentCameraManager,
-  ExpoFontLoader: ExponentFontLoader,
-  ExpoPermissions: ExponentPermissions,
-};
+export default nativeModulesProxy;

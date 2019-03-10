@@ -4,7 +4,7 @@ import { RCTModule } from 'react-native-dom';
 import FontFaceObserver from 'fontfaceobserver';
 
 export default class FontLoader extends RCTModule {
-  static moduleName = 'ExponentFontLoader';
+  static moduleName = 'ExpoFontLoader';
 
   async $$loadAsync(nativeFontName, resource) {
     const fontName = nativeFontName.replace(/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}-/, '');
