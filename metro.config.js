@@ -20,26 +20,31 @@ const domModuleMap = {
   'react-native-gesture-handler': path.resolve(__dirname, './vendor/react-native-gesture-handler/index.js'),
 };
 
-// path mapping workaround for Expo SDK
-const baseDir = path.resolve(__dirname, '../react-native-dom/Libraries');
-glob.sync(baseDir + '/**/*.dom.js').forEach((fullPath) => {
-  const relPath = fullPath.slice(baseDir.length, -'.dom.js'.length);
-  const pathList = relPath.split('/');
-  const name = pathList.pop();
-  const dir = pathList.pop();
-  domModuleMap['./..' + relPath] = fullPath;
-  domModuleMap['./../..' + relPath] = fullPath;
-  domModuleMap['./' + name] = fullPath;
-  domModuleMap['./../../' + dir + '/' + name] = fullPath;
-});
-// require('fs').appendFileSync('/tmp/metro-resolve.log', `${JSON.stringify(domModuleMap)}\n`);
+const dirRNLib = path.resolve(__dirname, '../react-native/Libraries') + '/';
+const dirRNDOMLib = path.resolve(__dirname, '../react-native-dom/Libraries') + '/';
+
+const getFullModulePath = (context, realModuleName) => {
+  if (context.originModulePath && realModuleName.startsWith('.')) {
+    return path.resolve(context.originModulePath, '..', realModuleName);
+  }
+  return realModuleName;
+};
 
 module.exports = {
   projectRoot: path.resolve(__dirname, '../..'),
   resolver: {
     resolveRequest: (context, realModuleName, platform) => {
-      if (platform === 'dom' && domModuleMap[realModuleName]) {
-        realModuleName = domModuleMap[realModuleName];
+      const fullPath = getFullModulePath(context, realModuleName);
+      if (platform === 'dom') {
+        if (domModuleMap[realModuleName]) {
+          realModuleName = domModuleMap[realModuleName];
+        } else if (fullPath.startsWith(dirRNLib)) {
+          // path mapping workaround for Expo SDK
+          const pathRNDOM = path.resolve(dirRNDOMLib, fullPath.slice(dirRNLib.length));
+          if (glob.sync(pathRNDOM + '.dom.*').length > 0) {
+            realModuleName = pathRNDOM;
+          }
+        }
       }
       // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`);
       const { resolveRequest, ...restContext } = context;
