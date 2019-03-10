@@ -5,9 +5,9 @@ const metroResolve = require('metro-resolver/src/resolve');
 
 const domModuleMap = {
   // delegate to "web"
-  './effects/BlurView': path.resolve(__dirname, './src/BlurView.dom.js'),
-  './NativeLinearGradient': path.resolve(__dirname, './src/NativeLinearGradient.dom.js'),
-  './facebook-ads': path.resolve(__dirname, './src/facebook-ads.dom.js'),
+  './effects/BlurView': './effects/BlurView.web',
+  './NativeLinearGradient': './NativeLinearGradient.web',
+  './facebook-ads': './facebook-ads/index.web',
 
   // custom patches
   './NativeModulesProxy': path.resolve(__dirname, './src/NativeModulesProxy.dom.js'),

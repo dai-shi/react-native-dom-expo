@@ -4,6 +4,9 @@
 ### Added
 - Permissions module
 - Camera module
+### Changed
+- Better workaround for path mapping
+- Simplify web fallback
 
 ## [0.0.10] - 2019-03-09
 ### Added
