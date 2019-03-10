@@ -44,6 +44,7 @@ const videoElementStyle = {
 class Camera extends RCTView {
   constructor(bridge) {
     super(bridge);
+    Object.assign(this.style, { overflow: 'hidden' });
     this.createVideoElement();
     this.initializeCameraModule(this.videoElement);
     this.childContainer.appendChild(this.videoElement);
