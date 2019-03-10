@@ -10,8 +10,7 @@ const domModuleMap = {
   './facebook-ads': './facebook-ads/index.web',
 
   // custom patches
-  './NativeModulesProxy': path.resolve(__dirname, './src/NativeModulesProxy.dom.js'),
-  './NativeViewManagerAdapter': path.resolve(__dirname, './src/NativeViewManagerAdapter.dom.js'),
+  'expo-react-native-adapter': path.resolve(__dirname, './src/ExpoReactNativeAdapter.dom.js'),
   'expo-asset/src/Asset': path.resolve(__dirname, './src/ExpoAsset.dom.js'),
   'expo-asset': path.resolve(__dirname, './src/ExpoAssetIndex.dom.js'),
 
