@@ -54,7 +54,7 @@ class Camera extends RCTView {
     this.videoElement = document.createElement('video');
     Object.assign(this.videoElement.style, videoElementStyle);
     this.videoElement.autoplay = true;
-    this.videoElement.playsinline = true;
+    this.videoElement.playsInline = true;
   }
 
   initializeCameraModule(videoElement) {
