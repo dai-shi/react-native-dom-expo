@@ -135,8 +135,18 @@ export default class CameraManager extends RCTViewManager {
     };
   }
 
-  $$takePicture(options, view) {
-    return view.camera.takePicture(options);
+  $$takePicture(options, reactTag) {
+    return new Promise((resolve, reject) => {
+      this.bridge.uiManager.addUIBlock((_, viewRegistry) => {
+        const view = viewRegistry.get(reactTag);
+        if (view && view instanceof Camera) {
+          const capturedPicture = view.camera.takePicture(options);
+          resolve(capturedPicture);
+        } else {
+          reject(new Error('no camera view'));
+        }
+      });
+    });
   }
 
   // $$recordAsync(options, camera) {}
@@ -145,15 +155,34 @@ export default class CameraManager extends RCTViewManager {
 
   // $$getSupportedRatios(camera) {}
 
-  $$getAvailablePictureSizes(ratio, view) {
-    return view.camera.getAvailablePictureSizes(ratio);
+  $$getAvailablePictureSizes(ratio, reactTag) {
+    return new Promise((resolve, reject) => {
+      this.bridge.uiManager.addUIBlock((_, viewRegistry) => {
+        const view = viewRegistry.get(reactTag);
+        if (view && view instanceof Camera) {
+          view.camera.getAvailablePictureSizes(ratio).then(resolve).catch(reject);
+        } else {
+          reject(new Error('no camera view'));
+        }
+      });
+    });
   }
 
-  $pausePreview(view) {
-    view.camera.pausePreview();
+  $pausePreview(reactTag) {
+    this.bridge.uiManager.addUIBlock((_, viewRegistry) => {
+      const view = viewRegistry.get(reactTag);
+      if (view && view instanceof Camera) {
+        view.camera.pausePreview();
+      }
+    });
   }
 
-  $resumePreview(view) {
-    view.camera.resumePreview();
+  $resumePreview(reactTag) {
+    this.bridge.uiManager.addUIBlock((_, viewRegistry) => {
+      const view = viewRegistry.get(reactTag);
+      if (view && view instanceof Camera) {
+        view.camera.resumePreview();
+      }
+    });
   }
 }
