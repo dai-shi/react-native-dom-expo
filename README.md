@@ -50,7 +50,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_medium_square: Branch
 - :black_medium_square: Brightness
 - :black_medium_square: Calendar
-- :white_medium_square: Camera
+- :ballot_box_with_check: Camera
 - :ballot_box_with_check: Constants
 - :black_medium_square: Contacts
 - :white_medium_square: DeviceMotion

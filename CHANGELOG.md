@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+
+## [0.0.11] - 2019-03-12
 ### Added
 - Permissions module
 - Camera module
