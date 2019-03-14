@@ -2,10 +2,11 @@
 A patch library to make Expo work with react-native-dom
 
 ## Motivation
-It's exciting to see [react-native-dom](https://github.com/vincentriemer/react-native-dom). What if we can use it with Expo with the simplest possible steps.
+It's exciting to see [react-native-dom](https://github.com/vincentriemer/react-native-dom).
+What if we can use it with [Expo](https://expo.io) with the simplest possible steps.
 
-This is a newly born project driven by the community
-to fill in the missing pieces to make Expo work with react-native-dom.
+This is an unofficial project to fill in the missing pieces to make Expo work with react-native-dom.
+It's still at the early stage and we need contributors.
 If you are interested in contributing, please jump in.
 
 ## How to run
@@ -17,10 +18,14 @@ npx init-rndom-expo
 npm run rndom
 ```
 
-Then, open <http://localhost:8081/dom/> in your browser.
+Then open <http://localhost:8081/dom/> in your browser.
+
+## Community Wiki
+[Wiki](https://github.com/dai-shi/react-native-dom-expo/wiki)
+is maintained by the community.
+Check it out for better understanding of RNDOM and the difference from RNWEB.
 
 ## Status
-
 - Mostly working :point_right: :white_check_mark:
 - Partially working :point_right: :ballot_box_with_check:
 - Some implemented :point_right: :heavy_check_mark:
@@ -98,7 +103,7 @@ Then, open <http://localhost:8081/dom/> in your browser.
 - :white_check_mark: SplashScreen
 - :white_medium_square: SQLite
 - :white_medium_square: StoreReview
-- :white_medium_square: Svg
+- :ballot_box_with_check: Svg
 - :white_medium_square: takeSnapshotAsync
 - :white_medium_square: TaskManager
 - :white_medium_square: Updates
