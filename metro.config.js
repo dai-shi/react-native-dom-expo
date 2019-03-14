@@ -29,25 +29,25 @@ const getFullModulePath = (context, realModuleName) => {
   return realModuleName;
 };
 
+const resolveRequest = (context, realModuleName, platform) => {
+  const fullPath = getFullModulePath(context, realModuleName);
+  if (platform === 'dom') {
+    if (domModuleMap[realModuleName]) {
+      realModuleName = domModuleMap[realModuleName];
+    } else if (fullPath.startsWith(dirRNLib)) {
+      // path mapping workaround for Expo SDK
+      const pathRNDOM = path.resolve(dirRNDOMLib, fullPath.slice(dirRNLib.length));
+      if (glob.sync(pathRNDOM + '.dom.*').length > 0) {
+        realModuleName = pathRNDOM;
+      }
+    }
+  }
+  // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`);
+  const { resolveRequest: removed, ...restContext } = context;
+  return metroResolve(restContext, realModuleName, platform);
+};
+
 module.exports = {
   projectRoot: path.resolve(__dirname, '../..'),
-  resolver: {
-    resolveRequest: (context, realModuleName, platform) => {
-      const fullPath = getFullModulePath(context, realModuleName);
-      if (platform === 'dom') {
-        if (domModuleMap[realModuleName]) {
-          realModuleName = domModuleMap[realModuleName];
-        } else if (fullPath.startsWith(dirRNLib)) {
-          // path mapping workaround for Expo SDK
-          const pathRNDOM = path.resolve(dirRNDOMLib, fullPath.slice(dirRNLib.length));
-          if (glob.sync(pathRNDOM + '.dom.*').length > 0) {
-            realModuleName = pathRNDOM;
-          }
-        }
-      }
-      // require('fs').appendFileSync('/tmp/metro-resolve.log', `${realModuleName}\n`);
-      const { resolveRequest, ...restContext } = context;
-      return metroResolve(restContext, realModuleName, platform);
-    },
-  },
+  resolver: { resolveRequest },
 };
