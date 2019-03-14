@@ -30,7 +30,7 @@ const parseMatrix = v => v && `matrix(${v.join(',')})`;
 const parseBrush = (a) => {
   if (!a) return a;
   if (a[0] === 1) return a[1];
-  return '#' + a.slice(1, 4).map(x => ('00' + (x * 255).toString(16)).slice(-2)).join('');
+  return '#' + a.slice(1, 4).map(x => ('0' + (x * 255).toString(16)).slice(-2)).join('');
 };
 
 const createSetter = (name, attr) => (view, value) => {
@@ -103,7 +103,12 @@ const createManager = (eleName, svgName, propDefs) => {
     insertReactSubviewAtIndex(subview, index) {
       super.insertReactSubviewAtIndex(subview, index);
       if (subview.domElement && !subview.domElementAttached) {
-        this.domElement.appendChild(subview.domElement);
+        if (index === this.reactSubviews.length) {
+          this.domElement.appendChild(subview.domElement);
+        } else {
+          const beforeElement = this.domElement.childNodes[index];
+          this.domElement.insertBefore(subview.domElement, beforeElement);
+        }
         subview.domElementAttached = true;
       }
     }
