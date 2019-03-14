@@ -12,6 +12,7 @@ import SecureStore from 'react-native-dom-expo/native/secure-store';
 import Speech from 'react-native-dom-expo/native/speech';
 import Permissions from 'react-native-dom-expo/native/permissions';
 import CameraManager from 'react-native-dom-expo/native/camera-manager';
+import Svg from 'react-native-dom-expo/native/svg';
 
 import appJson from '../app.json';
 
@@ -51,6 +52,7 @@ const ReactNativeDomOptions = {
     Speech,
     Permissions,
     CameraManager,
+    ...Svg,
   ],
 };
 

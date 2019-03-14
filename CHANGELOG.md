@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Added
+- Experimental Svg module
 
 ## [0.0.11] - 2019-03-12
 ### Added
