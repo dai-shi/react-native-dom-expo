@@ -17,6 +17,7 @@ const domModuleMap = {
   // vendor libs
   'expo-camera': path.resolve(__dirname, './vendor/expo-camera/index.ts'),
   'react-native-gesture-handler': path.resolve(__dirname, './vendor/react-native-gesture-handler/index.js'),
+  'react-native-gesture-handler/DrawerLayout': path.resolve(__dirname, './vendor/react-native-gesture-handler/DrawerLayout.js'),
 };
 
 const dirRNLib = path.resolve(__dirname, '../react-native/Libraries') + '/';
