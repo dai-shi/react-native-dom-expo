@@ -1,6 +1,8 @@
 # Change Log
 
 ## [Unreleased]
+### Changed
+- Fix Svg LinearGradient
 
 ## [0.0.12] - 2019-03-14
 ### Added

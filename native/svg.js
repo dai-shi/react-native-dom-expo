@@ -20,10 +20,9 @@ const setAttributeViewBox = (ele, name, value) => {
   ele.setAttribute('viewBox', newParts.join(' '));
 };
 
-const setAttributeVectorEffect = (ele, value) => {
-  const vectorEffects = ['default', 'non-scaling-stroke', 'inherit'];
-  ele.setAttribute('vector-effect', vectorEffects[value]);
-};
+const VECTOR_EFFECTS = ['default', 'non-scaling-stroke', 'inherit'];
+
+const GRADIENT_UNITS = ['objectBoundingBox', 'userSpaceOnUse'];
 
 const parseMatrix = v => v && `matrix(${v.join(',')})`;
 
@@ -36,8 +35,6 @@ const parseBrush = (a) => {
 const createSetter = (name, attr) => (view, value) => {
   if (['align', 'meetOrSlice'].includes(name)) {
     setAttributePreserveAspectRatio(view.domElement, name, value);
-  } else if (name === 'vectorEffect') {
-    setAttributeVectorEffect(view.domElement, value);
   } else if (['minX', 'minY', 'vbWidth', 'vbHeight'].includes(name)) {
     setAttributeViewBox(view.domElement, name, value);
   } else {
@@ -50,6 +47,9 @@ const createSetter = (name, attr) => (view, value) => {
     if (name === 'fill') v = parseBrush(v);
     if (name === 'matrix') { n = 'transform'; v = parseMatrix(value); }
     if (name === 'strokeDasharray') v = value && value.join(' ');
+    if (name === 'vectorEffect') v = VECTOR_EFFECTS[value];
+    if (name === 'gradientUnits') v = GRADIENT_UNITS[value];
+    if (name.endsWith('Transform')) v = `matrix(${value})`; // gradientTransform
     if (v === null) {
       view.domElement.removeAttribute(n);
     } else {
@@ -253,7 +253,7 @@ export default [
     { name: 'x2', type: RCTPropTypes.number },
     { name: 'y2', type: RCTPropTypes.number },
     { name: 'gradient', type: RCTPropTypes.number },
-    { name: 'gradientUnits', type: RCTPropTypes.string },
+    { name: 'gradientUnits', type: RCTPropTypes.number },
     { name: 'gradientTransform', type: RCTPropTypes.string },
   ]),
   createManager('Mask', 'mask', [
@@ -296,7 +296,7 @@ export default [
     { name: 'rx', type: RCTPropTypes.number },
     { name: 'ry', type: RCTPropTypes.number },
     { name: 'gradient', type: RCTPropTypes.number },
-    { name: 'gradientUnits', type: RCTPropTypes.string },
+    { name: 'gradientUnits', type: RCTPropTypes.number },
     { name: 'gradientTransform', type: RCTPropTypes.string },
   ]),
   createManager('Rect', 'rect', [
